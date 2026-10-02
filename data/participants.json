@@ -1,1 +1,17 @@
-
+[
+  {
+    "name": "Participant One",
+    "institution": "Institution A",
+    "field": "Art & Design"
+  },
+  {
+    "name": "Participant Two",
+    "institution": "Institution B",
+    "field": "Fine Arts"
+  },
+  {
+    "name": "Participant Three",
+    "institution": "Institution C",
+    "field": "Creative Media"
+  }
+]
