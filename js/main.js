@@ -1,99 +1,277 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* =========================
+   MOBILE MENU
+========================= */
 
-  /* LOADER */
+const menuButton =
+  document.getElementById("menuButton");
 
-  const loader = document.getElementById("loader");
-
-  setTimeout(() => {
-
-    if (loader) {
-
-      loader.classList.add("hide");
-
-    }
-
-  }, 800);
+const mobileMenu =
+  document.getElementById("mobileMenu");
 
 
-  /* MUSIC */
+if (menuButton && mobileMenu) {
 
-  const music =
-    document.getElementById("backgroundMusic");
+  menuButton.addEventListener("click", () => {
 
-  const musicButton =
-    document.getElementById("musicButton");
+    mobileMenu.classList.toggle("open");
 
-
-  let playing = false;
+  });
 
 
-  if (music && musicButton) {
+  document
+    .querySelectorAll(".mobile-menu a")
+    .forEach(link => {
 
-    musicButton.addEventListener("click", () => {
+      link.addEventListener("click", () => {
 
-      if (!playing) {
+        mobileMenu.classList.remove("open");
 
-        music.play()
-          .then(() => {
-
-            playing = true;
-
-            musicButton.textContent = "Ⅱ";
-
-          })
-          .catch(error => {
-
-            console.log(
-              "Music could not start:",
-              error
-            );
-
-          });
-
-      } else {
-
-        music.pause();
-
-        playing = false;
-
-        musicButton.textContent = "♫";
-
-      }
+      });
 
     });
 
+}
+
+
+/* =========================
+   CUSTOM CURSOR
+========================= */
+
+const cursor =
+  document.querySelector(".cursor");
+
+const cursorRing =
+  document.querySelector(".cursor-ring");
+
+
+if (cursor && cursorRing && window.innerWidth > 900) {
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let ringX = 0;
+  let ringY = 0;
+
+
+  document.addEventListener("mousemove", event => {
+
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+    cursor.style.left = mouseX + "px";
+    cursor.style.top = mouseY + "px";
+
+  });
+
+
+  function animateCursor() {
+
+    ringX += (mouseX - ringX) * .12;
+    ringY += (mouseY - ringY) * .12;
+
+    cursorRing.style.left =
+      ringX + "px";
+
+    cursorRing.style.top =
+      ringY + "px";
+
+    requestAnimationFrame(
+      animateCursor
+    );
+
   }
 
+  animateCursor();
 
-  /* PAGE FADE */
 
-  document.querySelectorAll("a").forEach(link => {
+  document
+    .querySelectorAll("a, button")
+    .forEach(element => {
 
-    link.addEventListener("click", event => {
+      element.addEventListener(
+        "mouseenter",
+        () => {
 
-      const href = link.getAttribute("href");
+          cursorRing.style.width = "55px";
+          cursorRing.style.height = "55px";
 
-      if (
-        href &&
-        !href.startsWith("#") &&
-        !href.startsWith("http") &&
-        !href.startsWith("mailto:")
-      ) {
+        }
+      );
+
+
+      element.addEventListener(
+        "mouseleave",
+        () => {
+
+          cursorRing.style.width = "35px";
+          cursorRing.style.height = "35px";
+
+        }
+      );
+
+    });
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const music =
+  document.getElementById(
+    "backgroundMusic"
+  );
+
+const musicButton =
+  document.getElementById(
+    "musicButton"
+  );
+
+const musicText =
+  document.getElementById(
+    "musicText"
+  );
+
+
+let playing = false;
+
+
+if (
+  music &&
+  musicButton
+) {
+
+  musicButton.addEventListener(
+    "click",
+    async () => {
+
+      try {
+
+        if (!playing) {
+
+          await music.play();
+
+          playing = true;
+
+          musicText.textContent =
+            "PAUSE MUSIC";
+
+        } else {
+
+          music.pause();
+
+          playing = false;
+
+          musicText.textContent =
+            "PLAY MUSIC";
+
+        }
+
+      } catch (error) {
+
+        console.log(
+          "Music error:",
+          error
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealItems =
+  document.querySelectorAll(
+    ".section, .person-card, .news-main, .news-side a"
+  );
+
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          observer.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+    {
+      threshold: .12
+    }
+  );
+
+
+revealItems.forEach(item => {
+
+  item.classList.add("reveal");
+
+  observer.observe(item);
+
+});
+
+
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+document
+  .querySelectorAll("a")
+  .forEach(link => {
+
+    const href =
+      link.getAttribute("href");
+
+
+    if (
+      !href ||
+      href.startsWith("#") ||
+      href.startsWith("http") ||
+      href.startsWith("mailto:")
+    ) {
+
+      return;
+
+    }
+
+
+    link.addEventListener(
+      "click",
+      event => {
 
         event.preventDefault();
 
-        document.body.style.opacity = "0";
+        document.body.classList.add(
+          "page-transition"
+        );
+
 
         setTimeout(() => {
 
-          window.location.href = href;
+          window.location.href =
+            href;
 
         }, 250);
 
       }
-
-    });
+    );
 
   });
-
-});
