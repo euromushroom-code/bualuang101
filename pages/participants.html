@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Participants — Bualuang 101</title>
+
+  <link rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <a href="../index.html"
+     class="logo">
+    BUALUANG<span>101</span>
+  </a>
+
+  <nav>
+
+    <a href="../index.html">HOME</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="activities.html">
+      ACTIVITIES
+    </a>
+
+    <a href="participants.html">
+      PARTICIPANTS
+    </a>
+
+    <a href="news.html">NEWS</a>
+
+    <a href="contact.html">
+      CONTACT
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="section">
+
+  <div class="section-label">
+    PARTICIPANTS
+  </div>
+
+  <h1 style="
+    font-size:clamp(50px,9vw,120px);
+    margin-top:50px;
+  ">
+    PARTICIPANTS
+  </h1>
+
+
+  <div id="participants"
+       class="card-grid">
+  </div>
+
+</section>
+
+</main>
+
+
+<script>
+
+fetch("../data/participants.json")
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    const container =
+      document.getElementById(
+        "participants"
+      );
+
+    data.forEach(person => {
+
+      const card =
+        document.createElement("article");
+
+      card.className =
+        "feature-card";
+
+      card.innerHTML = `
+
+        <span>
+          ${person.institution}
+        </span>
+
+        <h3>
+          ${person.name}
+        </h3>
+
+        <p>
+          ${person.field}
+        </p>
+
+      `;
+
+      container.appendChild(card);
+
+    });
+
+  })
+
+  .catch(error => {
+
+    console.error(error);
+
+  });
+
+</script>
+
+</body>
+
+</html>
