@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>News — Bualuang 101</title>
+
+  <link rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <a href="../index.html"
+     class="logo">
+    BUALUANG<span>101</span>
+  </a>
+
+  <nav>
+
+    <a href="../index.html">HOME</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="activities.html">
+      ACTIVITIES
+    </a>
+
+    <a href="participants.html">
+      PARTICIPANTS
+    </a>
+
+    <a href="news.html">NEWS</a>
+
+    <a href="contact.html">
+      CONTACT
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="section">
+
+  <div class="section-label">
+    NEWS & STORIES
+  </div>
+
+  <h1 style="
+    font-size:clamp(55px,9vw,120px);
+    margin-top:50px;
+  ">
+    NEWS
+  </h1>
+
+  <div id="news"
+       class="card-grid">
+  </div>
+
+</section>
+
+</main>
+
+
+<script>
+
+fetch("../data/news.json")
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    const container =
+      document.getElementById("news");
+
+    data.forEach(item => {
+
+      const card =
+        document.createElement("article");
+
+      card.className =
+        "feature-card";
+
+      card.innerHTML = `
+
+        <span>${item.date}</span>
+
+        <h3>
+          ${item.title}
+        </h3>
+
+        <p>
+          ${item.description}
+        </p>
+
+      `;
+
+      container.appendChild(card);
+
+    });
+
+  });
+
+</script>
+
+</body>
+
+</html>
