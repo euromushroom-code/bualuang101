@@ -1,75 +1,1136 @@
-<!-- KEY DATES -->
-<section class="timeline-section" id="schedule">
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="section-header">
-    <div>
-      <span class="eyebrow">KEY DATES / BUALUANG 101</span>
-      <h2>Mark Your<br><em>Calendar.</em></h2>
+  <meta
+    name="description"
+    content="ดาวเด่นบัวหลวง 101 — พื้นที่แห่งการเรียนรู้ การสร้างสรรค์ และการเติบโตของคนรุ่นใหม่"
+  >
+
+  <title>BUALUANG 101 — ดาวเด่นบัวหลวง 101</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       LOADER
+  ========================================== -->
+
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">101</div>
+      <div class="loader-line">
+        <span></span>
+      </div>
+      <p>BUALUANG 101</p>
     </div>
-
-    <p class="section-intro">
-      ทุกช่วงเวลาสำคัญของการเดินทาง
-      ใน Bualuang 101
-    </p>
   </div>
 
-  <div class="timeline">
 
-    <!-- EVENT 01 -->
-    <article class="timeline-item">
+  <!-- =========================================
+       CURSOR
+  ========================================== -->
 
-      <div class="timeline-number">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+
+  <!-- =========================================
+       NAVIGATION
+  ========================================== -->
+
+  <header class="site-header" id="siteHeader">
+
+    <a href="#top" class="brand">
+      <span class="brand-symbol">101</span>
+
+      <span class="brand-text">
+        <strong>BUALUANG</strong>
+        <small>ดาวเด่นบัวหลวง 101</small>
+      </span>
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="#about" data-nav="about">
+        ABOUT
+      </a>
+
+      <a href="#schedule" data-nav="schedule">
+        SCHEDULE
+      </a>
+
+      <a href="#activities" data-nav="activities">
+        ACTIVITIES
+      </a>
+
+      <a href="#people" data-nav="people">
+        PEOPLE
+      </a>
+
+      <a href="#news" data-nav="news">
+        NEWS
+      </a>
+
+    </nav>
+
+
+    <a href="#contact" class="header-cta">
+      JOIN US
+      <span>↗</span>
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="เปิดเมนู"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-top">
+      <span>MENU</span>
+      <span>BUALUANG 101</span>
+    </div>
+
+    <nav>
+
+      <a href="#about">
+        <span>01</span>
+        ABOUT
+      </a>
+
+      <a href="#schedule">
+        <span>02</span>
+        SCHEDULE
+      </a>
+
+      <a href="#activities">
+        <span>03</span>
+        ACTIVITIES
+      </a>
+
+      <a href="#people">
+        <span>04</span>
+        PEOPLE
+      </a>
+
+      <a href="#news">
+        <span>05</span>
+        NEWS
+      </a>
+
+      <a href="#contact">
+        <span>06</span>
+        CONTACT
+      </a>
+
+    </nav>
+
+    <div class="mobile-menu-footer">
+      CREATE · CONNECT · GROW
+    </div>
+
+  </div>
+
+
+  <main id="top">
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+
+      <div class="hero-noise"></div>
+
+      <div class="hero-topline">
+        <span>INSPIRATION / COMMUNITY / FUTURE</span>
+        <span>THAILAND</span>
+      </div>
+
+
+      <div class="hero-content">
+
+        <div class="hero-small-label reveal">
+          <span class="label-dot"></span>
+          ดาวเด่นบัวหลวง 101
+        </div>
+
+
+        <h1 class="hero-title">
+
+          <span class="hero-title-line reveal">
+            BUALUANG
+          </span>
+
+          <span class="hero-title-line hero-number reveal">
+            <span>101</span>
+            <i>°</i>
+          </span>
+
+        </h1>
+
+
+        <div class="hero-bottom">
+
+          <div class="hero-description reveal">
+            <p>
+              พื้นที่แห่งการเรียนรู้
+              การสร้างสรรค์ และการเติบโต
+              สำหรับคนรุ่นใหม่
+            </p>
+
+            <a href="#about" class="circle-link">
+              <span>EXPLORE</span>
+              <strong>↓</strong>
+            </a>
+          </div>
+
+
+          <div class="hero-meta reveal">
+
+            <div>
+              <span>01</span>
+              <small>DISCOVER</small>
+            </div>
+
+            <div>
+              <span>02</span>
+              <small>CREATE</small>
+            </div>
+
+            <div>
+              <span>03</span>
+              <small>CONNECT</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-shape shape-one"></div>
+      <div class="hero-shape shape-two"></div>
+
+
+      <div class="scroll-indicator">
+        <span>SCROLL TO DISCOVER</span>
+        <i></i>
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO STATEMENT
+    ========================================== -->
+
+    <section class="statement">
+
+      <div class="statement-number">
         01
       </div>
 
-      <div class="timeline-date">
-        <span>17—19</span>
-        <small>OCTOBER</small>
+      <div class="statement-content">
+
+        <p class="eyebrow">
+          WHY BUALUANG 101
+        </p>
+
+        <h2 class="statement-title reveal-text">
+          เราเชื่อว่า
+          <span>คนรุ่นใหม่</span>
+          ไม่ได้มีแค่ความฝัน
+          แต่มีพลังในการสร้าง
+          <span>อนาคต</span>
+          ของตัวเอง
+        </h2>
+
       </div>
 
-      <div class="timeline-content">
-        <span class="timeline-tag">
-          ORIENTATION
-        </span>
+    </section>
 
-        <h3>ปฐมนิเทศ</h3>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section class="about section-dark" id="about">
+
+      <div class="about-grid">
+
+        <div class="section-index">
+          <span>01</span>
+          <small>ABOUT</small>
+        </div>
+
+
+        <div class="about-heading">
+
+          <p class="eyebrow light">
+            ABOUT THE PROGRAM
+          </p>
+
+          <h2>
+            More than
+            <em>a program.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <p class="large-copy">
+            ดาวเด่นบัวหลวง 101
+            คือพื้นที่ที่เปิดโอกาสให้คนรุ่นใหม่
+            ได้เรียนรู้ ทดลอง สร้างสรรค์
+            และเชื่อมต่อกับผู้คนที่มีความสนใจ
+            และแรงผลักดันร่วมกัน
+          </p>
+
+          <p>
+            เพราะการเติบโตไม่ได้เกิดขึ้น
+            จากการเดินคนเดียว เราจึงสร้าง
+            ประสบการณ์ที่เปิดพื้นที่ให้ทุกคน
+            ได้ค้นพบศักยภาพของตัวเอง
+            ผ่านกิจกรรมและการแลกเปลี่ยน
+            ที่เกิดขึ้นจริง
+          </p>
+
+
+          <a href="#activities" class="text-link">
+            EXPLORE ACTIVITIES
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="about-marquee">
+
+        <div class="marquee-track">
+
+          <span>CREATE</span>
+          <b>✳</b>
+          <span>CONNECT</span>
+          <b>✳</b>
+          <span>LEARN</span>
+          <b>✳</b>
+          <span>GROW</span>
+          <b>✳</b>
+          <span>CREATE</span>
+          <b>✳</b>
+          <span>CONNECT</span>
+          <b>✳</b>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         KEY DATES
+    ========================================== -->
+
+    <section class="schedule" id="schedule">
+
+      <div class="section-heading">
+
+        <div class="heading-left">
+
+          <p class="eyebrow">
+            KEY DATES / BUALUANG 101
+          </p>
+
+          <h2>
+            Mark Your
+            <em>Calendar.</em>
+          </h2>
+
+        </div>
+
+
+        <p class="heading-description">
+          ทุกช่วงเวลาสำคัญของการเดินทาง
+          ใน Bualuang 101
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+
+        <!-- EVENT 01 -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-number">
+            01
+          </div>
+
+
+          <div class="timeline-date">
+
+            <strong>
+              17—19
+            </strong>
+
+            <span>
+              OCTOBER
+            </span>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <span class="event-tag">
+              ORIENTATION
+            </span>
+
+            <h3>
+              ปฐมนิเทศ
+            </h3>
+
+            <p>
+              พบปะผู้เข้าร่วม ทำความรู้จักโครงการ
+              และเตรียมความพร้อมก่อนเข้าสู่กิจกรรม
+            </p>
+
+          </div>
+
+
+          <div class="timeline-arrow">
+            ↗
+          </div>
+
+        </article>
+
+
+
+        <!-- EVENT 02 -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-number">
+            02
+          </div>
+
+
+          <div class="timeline-date">
+
+            <strong>
+              09—15
+            </strong>
+
+            <span>
+              NOVEMBER
+            </span>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <span class="event-tag yellow">
+              FINAL ROUND
+            </span>
+
+            <h3>
+              การแข่งขันและการตัดสิน
+            </h3>
+
+            <p>
+              การแข่งขันรอบรวม พร้อมการพิจารณา
+              และตัดสินผลงานในรอบสุดท้าย
+            </p>
+
+          </div>
+
+
+          <div class="timeline-arrow">
+            ↗
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ACTIVITIES
+    ========================================== -->
+
+    <section class="activities section-dark" id="activities">
+
+      <div class="activities-heading">
+
+        <div>
+
+          <p class="eyebrow light">
+            WHAT'S HAPPENING
+          </p>
+
+          <h2>
+            Learn.
+            <br>
+            <em>Experience.</em>
+          </h2>
+
+        </div>
+
 
         <p>
-          พบปะผู้เข้าร่วม ทำความรู้จักโครงการ
-          และเตรียมความพร้อมก่อนเข้าสู่กิจกรรม
+          กิจกรรมที่ออกแบบมาเพื่อเปิดมุมมองใหม่
+          สร้างประสบการณ์ และเชื่อมต่อผู้คน
         </p>
+
       </div>
 
-    </article>
+
+      <div class="activity-grid">
 
 
-    <!-- EVENT 02 -->
-    <article class="timeline-item">
+        <article class="activity-card activity-large">
 
-      <div class="timeline-number">
-        02
+          <div class="activity-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1400&q=85"
+              alt="Workshop"
+            >
+
+            <span class="image-number">
+              01
+            </span>
+
+          </div>
+
+
+          <div class="activity-info">
+
+            <div>
+              <span>WORKSHOP</span>
+
+              <h3>
+                Learn<br>
+                Something New.
+              </h3>
+            </div>
+
+            <span class="activity-arrow">
+              ↗
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="activity-card">
+
+          <div class="activity-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=85"
+              alt="Community"
+            >
+
+            <span class="image-number">
+              02
+            </span>
+
+          </div>
+
+
+          <div class="activity-info">
+
+            <div>
+              <span>COMMUNITY</span>
+
+              <h3>
+                Meet<br>
+                Your People.
+              </h3>
+            </div>
+
+            <span class="activity-arrow">
+              ↗
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="activity-card">
+
+          <div class="activity-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+              alt="Collaboration"
+            >
+
+            <span class="image-number">
+              03
+            </span>
+
+          </div>
+
+
+          <div class="activity-info">
+
+            <div>
+              <span>COLLABORATION</span>
+
+              <h3>
+                Create<br>
+                Together.
+              </h3>
+            </div>
+
+            <span class="activity-arrow">
+              ↗
+            </span>
+
+          </div>
+
+        </article>
+
+
       </div>
 
-      <div class="timeline-date">
-        <span>09—15</span>
-        <small>NOVEMBER</small>
+    </section>
+
+
+
+    <!-- =========================================
+         PEOPLE
+    ========================================== -->
+
+    <section class="people" id="people">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            THE PEOPLE
+          </p>
+
+          <h2>
+            Meet the
+            <em>Next.</em>
+          </h2>
+
+        </div>
+
+
+        <p class="heading-description">
+          ผู้คนที่นำความคิด
+          ความสามารถ และมุมมองใหม่ ๆ
+          มาร่วมสร้างประสบการณ์
+        </p>
+
       </div>
 
-      <div class="timeline-content">
-        <span class="timeline-tag">
-          FINAL ROUND
+
+      <div class="people-grid">
+
+
+        <article class="person-card">
+
+          <div class="person-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+              alt="Participant"
+            >
+
+            <span>
+              01
+            </span>
+
+          </div>
+
+          <div class="person-info">
+
+            <div>
+              <small>PARTICIPANT</small>
+              <h3>YOUR NAME</h3>
+            </div>
+
+            <span>↗</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="person-card">
+
+          <div class="person-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
+              alt="Participant"
+            >
+
+            <span>
+              02
+            </span>
+
+          </div>
+
+          <div class="person-info">
+
+            <div>
+              <small>PARTICIPANT</small>
+              <h3>YOUR NAME</h3>
+            </div>
+
+            <span>↗</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="person-card">
+
+          <div class="person-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85"
+              alt="Participant"
+            >
+
+            <span>
+              03
+            </span>
+
+          </div>
+
+          <div class="person-info">
+
+            <div>
+              <small>PARTICIPANT</small>
+              <h3>YOUR NAME</h3>
+            </div>
+
+            <span>↗</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="person-card">
+
+          <div class="person-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85"
+              alt="Participant"
+            >
+
+            <span>
+              04
+            </span>
+
+          </div>
+
+          <div class="person-info">
+
+            <div>
+              <small>PARTICIPANT</small>
+              <h3>YOUR NAME</h3>
+            </div>
+
+            <span>↗</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BIG STATEMENT
+    ========================================== -->
+
+    <section class="big-statement">
+
+      <div class="big-statement-inner">
+
+        <span class="big-symbol">
+          ✳
         </span>
 
-        <h3>การแข่งขันและการตัดสิน</h3>
+        <h2>
+          YOUR IDEA
+          <br>
+          <span>MATTERS.</span>
+        </h2>
 
         <p>
-          การแข่งขันรอบรวม พร้อมการพิจารณา
-          และตัดสินผลงานในรอบสุดท้าย
+          ทุกความคิดมีพื้นที่ให้เติบโต
         </p>
+
       </div>
 
-    </article>
+    </section>
 
-  </div>
 
-</section>
+
+    <!-- =========================================
+         NEWS
+    ========================================== -->
+
+    <section class="news" id="news">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            LATEST
+          </p>
+
+          <h2>
+            What's
+            <em>New.</em>
+          </h2>
+
+        </div>
+
+
+        <a href="#" class="outline-button">
+          VIEW ALL
+          <span>↗</span>
+        </a>
+
+      </div>
+
+
+      <div class="news-list">
+
+
+        <article class="news-item">
+
+          <div class="news-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85"
+              alt="News"
+            >
+
+          </div>
+
+
+          <div class="news-meta">
+            <span>01</span>
+            <small>NEWS</small>
+          </div>
+
+
+          <div class="news-content">
+
+            <small>
+              17 OCTOBER
+            </small>
+
+            <h3>
+              เตรียมพบกับประสบการณ์
+              ใหม่ใน Bualuang 101
+            </h3>
+
+            <p>
+              เรื่องราว กิจกรรม และสิ่งที่คุณ
+              ไม่ควรพลาดในครั้งนี้
+            </p>
+
+          </div>
+
+
+          <span class="news-arrow">
+            ↗
+          </span>
+
+        </article>
+
+
+
+        <article class="news-item">
+
+          <div class="news-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85"
+              alt="News"
+            >
+
+          </div>
+
+
+          <div class="news-meta">
+            <span>02</span>
+            <small>UPDATE</small>
+          </div>
+
+
+          <div class="news-content">
+
+            <small>
+              19 OCTOBER
+            </small>
+
+            <h3>
+              Connect with people
+              who inspire you
+            </h3>
+
+            <p>
+              พบปะ แลกเปลี่ยน และสร้าง
+              connection ใหม่ ๆ
+            </p>
+
+          </div>
+
+
+          <span class="news-arrow">
+            ↗
+          </span>
+
+        </article>
+
+
+
+        <article class="news-item">
+
+          <div class="news-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85"
+              alt="News"
+            >
+
+          </div>
+
+
+          <div class="news-meta">
+            <span>03</span>
+            <small>STORY</small>
+          </div>
+
+
+          <div class="news-content">
+
+            <small>
+              15 NOVEMBER
+            </small>
+
+            <h3>
+              Final Round —
+              The next chapter begins
+            </h3>
+
+            <p>
+              ติดตามการแข่งขันและการตัดสิน
+              ในรอบสุดท้าย
+            </p>
+
+          </div>
+
+
+          <span class="news-arrow">
+            ↗
+          </span>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta" id="contact">
+
+      <div class="cta-decoration">
+        101
+      </div>
+
+
+      <div class="cta-content">
+
+        <p class="eyebrow">
+          READY?
+        </p>
+
+        <h2>
+          Let's make
+          <br>
+          <em>something happen.</em>
+        </h2>
+
+        <p class="cta-description">
+          เริ่มต้นประสบการณ์ใหม่
+          และค้นพบสิ่งที่คุณสามารถสร้างได้
+        </p>
+
+        <a href="mailto:example@email.com" class="main-button">
+          CONTACT US
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+          101
+        </div>
+
+        <div>
+          <strong>BUALUANG 101</strong>
+          <span>ดาวเด่นบัวหลวง 101</span>
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <span>NAVIGATE</span>
+
+          <a href="#about">About</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#activities">Activities</a>
+
+        </div>
+
+
+        <div>
+
+          <span>EXPLORE</span>
+
+          <a href="#people">People</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+          <span>SOCIAL</span>
+
+          <a href="#">Facebook ↗</a>
+          <a href="#">Instagram ↗</a>
+          <a href="#">Line ↗</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © BUALUANG 101
+      </span>
+
+      <span>
+        CREATE · CONNECT · GROW
+      </span>
+
+      <span>
+        MADE FOR THE NEXT GENERATION
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
