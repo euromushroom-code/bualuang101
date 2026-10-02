@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Activities — Bualuang 101</title>
+
+  <link rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <a href="../index.html"
+     class="logo">
+    BUALUANG<span>101</span>
+  </a>
+
+  <nav>
+
+    <a href="../index.html">HOME</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="activities.html">
+      ACTIVITIES
+    </a>
+
+    <a href="participants.html">
+      PARTICIPANTS
+    </a>
+
+    <a href="news.html">NEWS</a>
+
+    <a href="contact.html">
+      CONTACT
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="section">
+
+  <div class="section-label">
+    ACTIVITIES
+  </div>
+
+  <h1 style="
+    font-size:clamp(60px,10vw,140px);
+    margin-top:50px;
+    letter-spacing:-5px;
+  ">
+    ACTIVITIES
+  </h1>
+
+  <div id="activities"
+       class="card-grid">
+  </div>
+
+</section>
+
+</main>
+
+
+<script>
+
+fetch("../data/activities.json")
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    const container =
+      document.getElementById("activities");
+
+    data.forEach(activity => {
+
+      const card =
+        document.createElement("article");
+
+      card.className =
+        "feature-card";
+
+      card.innerHTML = `
+
+        <span>${activity.year}</span>
+
+        <h3>
+          ${activity.title}
+        </h3>
+
+        <p>
+          ${activity.description}
+        </p>
+
+      `;
+
+      container.appendChild(card);
+
+    });
+
+  })
+
+  .catch(error => {
+
+    console.error(error);
+
+  });
+
+</script>
+
+</body>
+</html>
